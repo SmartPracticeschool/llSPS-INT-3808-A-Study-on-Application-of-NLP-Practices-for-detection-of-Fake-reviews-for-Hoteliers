@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        body{
+            background-image: url("{{ url_for('static', filename='img/bg2.gif') }}");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+    <title>ML API</title>
+  </head>
+  <body>
+    <h1 class="jumbotron" style="text-align: center;">Fake Review Detection For Hoteliers</h1>
+    <div class="container">
+
+    <form action="{{ url_for('y_predict')}}"method="post">
+        <div class="form-group col-auto">
+            <label>Your Review</label>
+            <textarea autofocus=autofocus rows="6" cols="60" name="review" placeholder="Enter Your Review Here..." required="required"></textarea>
+        </div>
+        <button type="submit">Predict</button>
+   </form>
+
+   <br>
+   <br>
+   </div>
+   <h1 class="jumbotron predict-text" style="text-align: center;">{{ prediction_text }}<h1>
+    
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+body{
+    margin: 0%;
+}
+.large-header {
+   position: relative;
+   width: 100%;
+   background: #111;
+   overflow: hidden;
+   background-size: cover;
+   background-position: center center;
+   z-index: 1;
+}
+
+.demo .large-header {
+   background-image: url("{{ url_for('static', filename='img/bg3.gif') }}");
+}
+
+.main-title {
+   position: absolute;
+   margin: 0;
+   padding: 5%;
+   color: #ffffff;
+   text-align: center;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate3d(-50%, -50%, 0);
+   transform: translate3d(-50%, -50%, 0);
+}
+
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 19px 29px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.5em;
+}
+
+a:hover, a:active {
+  padding: 0px 5px
+  vertical-align: middle;
+  background-color: red;
+}
+
+.demo .main-title {
+   text-transform: uppercase;
+   font-size: 3em;
+   letter-spacing: 0.1em;
+}
+
+.main-title .thin {
+   font-weight: 200;
+}
+
+@media only screen and (max-width: 768px) {
+   .demo .main-title {
+      font-size: 3em;
+   }
+}
+
+</style>
+</head>
+<body>
+<div class="container demo">
+   <div class="content">
+      <div id="large-header" class="large-header">
+         <h1 class="main-title"><span class="thin">Welcome to<br> Fake Review Detection<br>System<br>
+         <a href="{{url_for('index')}}">START</a>
+         </h1>
+      </div>
+   </div>
+</div>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/TweenLite.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/EasePack.min.js"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/499416/demo.js"></script>
+</body>
+</html>
