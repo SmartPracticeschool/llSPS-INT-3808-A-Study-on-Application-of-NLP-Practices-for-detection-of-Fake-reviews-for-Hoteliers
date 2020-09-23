@@ -10,6 +10,9 @@ model = keras.models.load_model('model1.h5')
 def home():
     return render_template('homepage.html')
     
+@app.route('/info')
+def info():
+    return render_template('info.html')
 
 @app.route('/index')
 def index():

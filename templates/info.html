@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <title>FAKE REVIEW DETECTION</title>
+  </head>
+  <body>
+      <nav class="navbar navbar-expand navbar-dark bg-dark">
+          <p class="navbar-brand" href="#">FAKE REVIEW DETECTION SYSTEM</p>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarsExample02">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{{url_for('home')}}">Home</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Project Info <span class="sr-only">(current)</span></a>
+              </li>
+            </ul>
+          </div>
+      </nav>
+      <div class="container" style="margin-top:150px;">
+      <div class="row">
+      <div class="col-lg-6">
+      <div class="about-pic">
+      <img src="{{ url_for('static', filename='img/info1.jpg') }}" alt="hotel image" style="width: 500px; height:300px;">
+      </div>
+      </div>
+      <div class="col-lg-6">
+      <div class="about-text">
+      <h2>Fake Review Detection System For Hoteliers</h2>
+      <p class="first-para" style="text-align: justify;">This system is designed to rule out the fake reviews for Hotels. The project is 
+      based on a study on application of Natural Language Processing(NLP) practices for detection 
+      of fake reviews for hoteliers.</p>
+      <p class="second-para" style="text-align: justify;">It helps its end users to classify whether a hotel review is fake or not. It
+      uses Artificial Neural Networks to classify the reviews. 
+      The model is built with a high accuracy of 98.5%.</p>
+      <a class="btn btn-primary" href="{{url_for('index')}}" role="button">CLICK HERE</a>
+      </div>
+      </div>
+      </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
